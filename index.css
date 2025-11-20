@@ -1,0 +1,125 @@
+
+body{
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom right, rgb(216, 126, 216),rgb(223, 63, 132)) no-repeat;
+}
+.container{
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(222, 219, 219, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+h1{
+  font-size: 50px;
+  
+}
+.input-txt{
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e4dddd;
+  border-radius: 5px;
+  font-size: 20px;
+
+}
+.display-text{
+  background-color: rgb(243, 237, 237);
+  margin: 5px;
+  margin-bottom: 30px;
+  height: 95px;
+  margin-top: 10px;
+  align-content: center;
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+  font-size: 30px;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+button{
+  transition:transform 0.6s ease,box-shadow 1s ease;
+}
+button:hover {
+    transform: translatey(-3px);
+    box-shadow: 0 5px 10px rgba(221, 223, 224, 0.3);
+}
+.upbtn{
+  padding: 15px;
+  background-color: rgb(102, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.lowbtn{
+  padding: 15px;
+  background-color: rgb(102, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.cap{
+  padding: 15px;
+  background-color: rgb(102, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.re{
+  padding: 15px;
+  background-color: rgb(236, 67, 67);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.bl{
+  padding: 15px;
+  background-color: rgb(4, 145, 183);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.gr{
+  padding: 15px;
+  background-color: rgba(87, 184, 8, 0.999);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.big{
+  padding: 15px;
+  background-color: rgb(102, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.small{
+  padding: 15px;
+  background-color: rgb(102, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.set{
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 9px;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  background-color: orange;
+  border: none;
+}
