@@ -1,26 +1,72 @@
-let display=document.getElementById("display");
-let up = document.getElementById("up");
-let low = document.getElementById("low");
-let capt = document.getElementById("capt");
-let  redc= document.getElementById("redc");
-let blcl = document.getElementById("blcl");
-let grcl= document.getElementById("grcl");
-let bigbtn = document.getElementById("bigbtn");
-let smallbtn = document.getElementById("smallbtn");
-let setag = document.getElementById("setag");
+const inputText = document.getElementById('inputText');
+const outputTextSpan = document.getElementById('hello');
+const resetBtn = document.getElementById('reset');
 
-let currentFontSize = 1.5;
-const initialText = textInput.value;
-const initialSize = currentFontSize;
-const initialColor = 'black';
 
-function toUpperCase(){
-  display.textContent=display.textContent.toUpperCase();
-}
-function toLowerCase(){
-  display.textContent=display.textContent.toLowerCase();
-}
-function toCapitalize(){
-  display.textContent=display.textContent.toCapitalize();
-}
+const initialText = inputText.value;
+const baseFontSize = 16;
+let currentFontSize = baseFontSize;
 
+
+
+const updateOutput = () => {
+  outputTextSpan.textContent = inputText.value;
+};
+
+
+const rcs = () => {
+  outputTextSpan.style.color = '';
+  outputTextSpan.style.fontSize = '';
+};
+
+document.getElementById('upper').addEventListener('click', () => {
+  outputTextSpan.textContent = outputTextSpan.textContent.toUpperCase();
+});
+
+document.getElementById('lower').addEventListener('click', () => {
+  outputTextSpan.textContent = outputTextSpan.textContent.toLowerCase();
+});
+
+document.getElementById('cap').addEventListener('click', () => {
+  const text = outputTextSpan.textContent.toLowerCase();
+  outputTextSpan.textContent = text.split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+});
+
+
+document.getElementById('red').addEventListener('click', () => {
+  rcs();
+  outputTextSpan.style.color = '#ef4444'; 
+});
+
+document.getElementById('Blue').addEventListener('click', () => {
+  rcs();
+  outputTextSpan.style.color = '#3b82f6';
+});
+
+document.getElementById('green').addEventListener('click', () => {
+  rcs();
+  outputTextSpan.style.color = '#22c55e';
+});
+
+ document.getElementById('big').addEventListener('click', () => {
+        currentFontSize += 2;
+        outputTextSpan.style.fontSize = '${currentFontSize}px';
+    });
+
+    document.getElementById('small').addEventListener('click', () => {
+        currentFontSize -= 2;
+        outputTextSpan.style.fontSize = '${currentFontSize}px';
+    });
+
+
+
+resetBtn.addEventListener('click', () => {
+  
+  inputText.value = initialText;
+  outputTextSpan.textContent = initialText;
+
+  rcs();
+  currentFontSize = baseFontSize;
+});
